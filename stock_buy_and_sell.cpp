@@ -4,7 +4,7 @@ public:
         int i = 0, j = i + 1, profit = 0,
             maxprofit = INT_MIN; // i=buy and j=sell
 
-        if (prices.size() == 1 || (prices[i]>=prices[j] && prices.size() == 2)  ) // Edge cases 
+        if (prices.size() == 1 || (prices[i]>=prices[j] && prices.size() == 2)  ) // like [1] or [2,1] edge case return 0 
             return 0;
 
 
