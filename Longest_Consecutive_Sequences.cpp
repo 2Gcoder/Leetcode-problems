@@ -10,7 +10,7 @@ public:
 
         for (int num : st) {
             int count = 1;
-            if (st.find(num - 1) ==
+            if (st.find(num-1) ==
                 st.end()) // finding smallest value in set . after getting the
                           // smallest value while loop run
             {
@@ -25,7 +25,7 @@ public:
                     st.erase(num);
                 }
 
-                lonng = max(count, lonng);
+                lonng = max(count , lonng);
             }
         }
         return lonng;
