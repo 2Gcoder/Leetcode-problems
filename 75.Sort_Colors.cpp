@@ -6,11 +6,9 @@ for(i=0;i<nums.size();i++)
 {
     if(nums[i]==0)
     cn0++;
-
     else{
         if(nums[i]==1)
         cn1++;
-
         else{
             cn2++;
         }
