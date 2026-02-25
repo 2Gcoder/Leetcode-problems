@@ -72,8 +72,8 @@ public:
                 if (j != (i + 1) && nums[j] == nums[j - 1])// skip duplicate
                     continue;
 
-                int k = j + 1;
-                int l = n - 1;
+                int k = j + 1; // moving pointer
+                int l = n - 1; // moving pointer
 
                 while (k < l) {
                     long long sum = nums[i];
