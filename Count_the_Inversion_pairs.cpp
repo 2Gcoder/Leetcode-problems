@@ -46,7 +46,7 @@ void mergesort(vector<int> &arr,int low,int high)
 
   if(low>=high)
     return cnt;
-int mid=(low+high)/2;f
+int mid=(low+high)/2; // here is small condtional check
 
 cnt +=  mergesort(arr,low, mid);
  cnt += mergesort( arr,mid+1 , high);
