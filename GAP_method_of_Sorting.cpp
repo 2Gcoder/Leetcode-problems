@@ -27,7 +27,7 @@ void merge(long long arr1[],long long arr2[], int n, int m)
         int left = 0;
         int right = left -gap;
 
-        while( right < left)
+        while( right < len)
         { // comparing left in arr1 and right in arr2 element
             if(left < n && right >=n)
             {
