@@ -12,11 +12,11 @@ public:
            { return mid;
            break;
            }
-
-          if(nums[str]<=nums[mid])
+    
+          if(nums[str]<=nums[mid])// checking that left side is sorted  
           
           {
-          if(nums[str]<=target && target<=nums[mid])
+          if(nums[str]<=target && target<=nums[mid])// and target lies between them
             end=mid-1;
             
             else 
@@ -26,7 +26,7 @@ public:
           }
            
          
-         else
+         else // or right is sorted or not then again same condition that for target  
             {
               if(nums[mid]==target)
               {return mid;
