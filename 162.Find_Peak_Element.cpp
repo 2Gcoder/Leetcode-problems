@@ -3,6 +3,8 @@ public:
     int findPeakElement(vector<int>& nums) {
         int i,j;
         int n= nums.size();
+
+        //Edge case for size of array 
         if(n==1 || (n==2 && nums[0] > nums[1]))
         return 0;
 
