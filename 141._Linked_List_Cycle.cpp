@@ -9,6 +9,9 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
+         
+     // Method 1 using hash mapping
+
 
         if( head == NULL || head->next == NULL ) return false;
       struct  ListNode *slow =   head;
@@ -27,6 +30,8 @@ public:
         }
 
         return false;
+
+                   
 
     }
 };
