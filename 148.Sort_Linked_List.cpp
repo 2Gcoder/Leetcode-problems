@@ -1,6 +1,6 @@
 class Solution {
 public:
-
+// METHOD 1 
     ListNode* Finding_middle(ListNode* head) {
         ListNode* slow = head;
         ListNode* fast = head->next;//initialize fast with next because we want slow at 1st middle , so that second middle will become right
@@ -67,5 +67,34 @@ public:
         right = sortList(right);
 
         return merge_LL(left, right);
+
+
+      //  METHOD 2
+class Solution {
+public:
+    ListNode* sortList(ListNode* head) {
+        vector<int> v;
+
+        // Store values in vector
+        ListNode* temp = head;
+        while (temp != nullptr) {
+            v.push_back(temp->val);
+            temp = temp->next;
+        }
+
+        // Sort vector
+        sort(v.begin(), v.end());
+
+        // Put sorted values back into linked list
+        temp = head;
+        int i = 0;
+        while (temp != nullptr) {
+            temp->val = v[i++];
+            temp = temp->next;
+        }
+
+        return head;
+    }
+};
     }
 };
