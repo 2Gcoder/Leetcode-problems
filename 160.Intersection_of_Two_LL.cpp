@@ -1,3 +1,17 @@
+ListNode* collisionpoint(ListNode* large,ListNode* small,int diff)
+{
+    while(diff--) // removing extra node of large LL, so, that both of them come at same distance from intersection
+    large = large->next;
+
+    while(large != small)
+    {
+        large = large->next;
+        small = small->next;
+    }
+
+    return large;
+}
+
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
@@ -19,50 +33,11 @@ public:
             }
         }
 
-        int n;
+        if(a>b)
+        return collisionpoint(headA,headB,a-b);
 
-        if(a == b){
+        return collisionpoint(headB,headA,b-a);
 
-            // Traverse both lists together until intersection is found  if both have equal length
-            while(headA != headB){
-                headA = headA->next;
-                headB = headB->next;
-            }
-            return headA;
-        }
-
-        if(a < b){
-
-            n = b - a;
-
-            // Move headB ahead by 'n' length difference . so, that both can start at same distance from intersection 
-            while(n--)
-                headB = headB->next;
-
-            // Traverse both lists together to find intersection
-            while(headA != headB)
-            {
-                headA = headA->next;
-                headB = headB->next;
-            }
-            return headA;
-        }
-
-        else{
-// Similar to above but a have extra nodes
-            n = a - b;
-
-            
-            while(n--)
-                headA = headA->next;
-
-            
-            while(headA != headB)
-            {
-                headA = headA->next;
-                headB = headB->next;
-            }
-            return headB;
-        }
+        
     }
 };
